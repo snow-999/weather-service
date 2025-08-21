@@ -6,17 +6,21 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+import java.util.Date;
 
 
 @Setter
 @Getter
 @Entity
 public class WeatherEntity {
-    private double tempC;
-    private double tempF;
     @Id
     private long id;
+    private double tempC;
+    private double tempF;
     private String note;
+    private String date;
+
 
     @Override
     public String toString() {

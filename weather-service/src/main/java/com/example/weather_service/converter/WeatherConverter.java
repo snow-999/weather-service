@@ -13,6 +13,7 @@ public class WeatherConverter {
         entity.setId(weatherDTO.getId());
         entity.setTempC(weatherDTO.getCurrent().getTempC());
         entity.setTempF(weatherDTO.getCurrent().getTempF());
+        entity.setDate(weatherDTO.getCurrent().getDate());
         return entity;
     }
 
@@ -21,6 +22,7 @@ public class WeatherConverter {
         dto.setId(weatherEntity.getId());
         dto.getCurrent().setTempC(weatherEntity.getTempC());
         dto.getCurrent().setTempF(weatherEntity.getTempF());
+        dto.getCurrent().setDate(weatherEntity.getDate());
         return dto;
     }
 }

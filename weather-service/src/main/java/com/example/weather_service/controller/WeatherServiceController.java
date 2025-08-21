@@ -14,9 +14,7 @@ public class WeatherServiceController {
 
     @GetMapping("hello")
     public ResponseEntity<WeatherDTO> sayHello() {
-
         ResponseEntity<WeatherDTO> weatherEntity = new RestTemplate().getForEntity("http://api.weatherapi.com/v1/current.json?key=005e653ed0dc4d35ac7192041200411&q=Cairo&aqi=no", WeatherDTO.class, HttpStatus.OK);
-        System.out.println();
         return weatherEntity;
     }
 }
