@@ -20,6 +20,7 @@ public class WeatherConverter {
     public WeatherDTO convertToDTO(WeatherEntity weatherEntity) {
         WeatherDTO dto = new WeatherDTO();
         dto.setId(weatherEntity.getId());
+        dto.setCurrent(new WeatherDTO.Current());
         dto.getCurrent().setTempC(weatherEntity.getTempC());
         dto.getCurrent().setTempF(weatherEntity.getTempF());
         dto.getCurrent().setDate(weatherEntity.getDate());
