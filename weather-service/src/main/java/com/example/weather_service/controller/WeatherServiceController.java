@@ -1,6 +1,7 @@
 package com.example.weather_service.controller;
 
 import com.example.weather_service.dto.WeatherDTO;
+import com.example.weather_service.entity.WeatherEntity;
 import com.example.weather_service.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -32,6 +33,11 @@ public class WeatherServiceController {
     public ResponseEntity<List<WeatherDTO>> getAllCurrentWeather() {
         List<WeatherDTO> dtoList = weatherService.getCurrentWeather();
         return new ResponseEntity<>(dtoList, HttpStatus.OK);
+    }
+
+    @GetMapping("getnotes")
+    public List<String> getAllNotes() {
+        return weatherService.getAllNotes();
     }
 
 }

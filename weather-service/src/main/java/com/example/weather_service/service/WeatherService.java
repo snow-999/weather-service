@@ -61,4 +61,10 @@ public class WeatherService {
             return HOT_WEATHER_NOTE;
         }
     }
+
+    public List<String> getAllNotes() {
+        return weatherRepository.selectNoteFromWeatherEntity();
+    }
+
+
 }
