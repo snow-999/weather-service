@@ -46,9 +46,9 @@ public class WeatherService {
 
 
 
-        boolean coldWeather = (int) temp <= 20 && (int) temp >= 1;
-        boolean goodWeather = (int) temp <= 30  && (int) temp > 20;
-        boolean sunnyWeather = (int) temp <= 40 && (int) temp > 30;
+        boolean coldWeather =  temp <= 20 &&  temp >= 1;
+        boolean goodWeather =  temp <= 30  &&  temp > 20;
+        boolean sunnyWeather =  temp <= 40 &&  temp > 30;
 
 
         if (coldWeather) {
