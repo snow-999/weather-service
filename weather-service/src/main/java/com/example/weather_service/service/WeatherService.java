@@ -38,18 +38,14 @@ public class WeatherService {
     }
 
     public String setNotes(double temp) {
-
         String COLD_WEATHER_NOTE = "weather is cold today pls wear heavy clothes";
         String GOOD_WEATHER_NOTE = "weather today is good have a nice day";
         String HOT_WEATHER_NOTE = "weather is extremely hot pls don't go out";
         String SUNNY_WEATHER_NOTE = "weather is sunny today be carful";
 
-
-
         boolean coldWeather =  temp <= 20 &&  temp >= 1;
         boolean goodWeather =  temp <= 30  &&  temp > 20;
         boolean sunnyWeather =  temp <= 40 &&  temp > 30;
-
 
         if (coldWeather) {
             return COLD_WEATHER_NOTE;
