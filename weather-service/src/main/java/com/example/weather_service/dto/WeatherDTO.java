@@ -12,6 +12,7 @@ public class WeatherDTO {
     private String note;
 
 
+
     @Override
     public String toString() {
         return "current is: " + this.getCurrent();
@@ -21,6 +22,8 @@ public class WeatherDTO {
     @Setter
     @Getter
     public static class Current {
+        @JsonProperty("wind_mph")
+        private String windMPH;
         @JsonProperty("temp_c")
         private double tempC;
         @JsonProperty("temp_f")
@@ -28,4 +31,5 @@ public class WeatherDTO {
         @JsonProperty("last_updated")
         private String date;
     }
+
 }

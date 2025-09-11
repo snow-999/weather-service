@@ -21,6 +21,8 @@ public class WeatherEntity {
     private String note;
     @JsonProperty("last_updated")
     private String date;
+    @JsonProperty("wind_mph")
+    private String windMPH;
 
 
     @Override

@@ -14,6 +14,7 @@ public class WeatherConverter {
         entity.setTempC(weatherDTO.getCurrent().getTempC());
         entity.setTempF(weatherDTO.getCurrent().getTempF());
         entity.setDate(weatherDTO.getCurrent().getDate());
+        entity.setWindMPH(weatherDTO.getCurrent().getWindMPH());
         entity.setNote(weatherDTO.getNote());
         return entity;
     }
@@ -25,6 +26,7 @@ public class WeatherConverter {
         dto.getCurrent().setTempC(weatherEntity.getTempC());
         dto.getCurrent().setTempF(weatherEntity.getTempF());
         dto.getCurrent().setDate(weatherEntity.getDate());
+        dto.getCurrent().setWindMPH(weatherEntity.getWindMPH());
         dto.setNote(weatherEntity.getNote());
         return dto;
     }
