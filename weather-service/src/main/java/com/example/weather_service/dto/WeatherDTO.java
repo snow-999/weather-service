@@ -9,6 +9,7 @@ import lombok.Setter;
 public class WeatherDTO {
     private long id;
     private Current current;
+    private Location location;
     private String note;
 
 
@@ -30,6 +31,18 @@ public class WeatherDTO {
         private double tempF;
         @JsonProperty("last_updated")
         private String date;
+        private Condition condition;
     }
-
+    @Setter
+    @Getter
+    public static class Condition {
+        @JsonProperty("icon")
+        private String icon;
+    }
+    @Setter
+    @Getter
+    public static class Location {
+        @JsonProperty("name")
+        private String cityName;
+    }
 }

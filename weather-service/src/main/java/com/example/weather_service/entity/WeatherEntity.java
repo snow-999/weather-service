@@ -23,6 +23,10 @@ public class WeatherEntity {
     private String date;
     @JsonProperty("wind_mph")
     private String windMPH;
+    @JsonProperty("icon")
+    private String icon;
+    @JsonProperty("name")
+    private String cityName;
 
 
     @Override

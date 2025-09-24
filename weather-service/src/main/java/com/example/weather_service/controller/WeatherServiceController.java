@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1")
+@CrossOrigin(origins = "http://localhost:4200")
 public class WeatherServiceController {
 
     @Autowired
@@ -23,7 +24,7 @@ public class WeatherServiceController {
         return "hihi";
     }
 
-    @PostMapping("setweather/{cityName}")
+    @PostMapping("set-weather/{cityName}")
     public ResponseEntity<WeatherDTO> saveCurrentWeather(@PathVariable String cityName) {
         WeatherDTO weatherDTO = weatherService.saveCurrentWeather(cityName);
         return new ResponseEntity<>(weatherDTO, HttpStatus.CREATED);
